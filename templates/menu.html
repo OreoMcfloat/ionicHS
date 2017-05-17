@@ -1,0 +1,87 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+  	
+	<ion-nav-bar class="bar-myHeader">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+		</ion-nav-buttons>
+    </ion-nav-bar>
+		    <ion-header-bar align-title="center" class="bar-myHeader">
+		<h1 class="title"><img src="img/logoHS.png"></h1>
+	</ion-header-bar>
+		
+		
+		<ion-tabs class="tabs-icon-top tabs-color-active-positive" enable-back-views="false">
+
+  <!-- Home Tab -->
+  <ion-tab title="Home" icon-off="ion-android-home" icon-on="ion-android-home" href="#/app/home">
+    <ion-nav-view name="app-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Statistics Tab -->
+  <ion-tab title="Statistics" icon-off="ion-stats-bars" icon-on="ion-stats-bars" href="#/app/statistics">
+    <ion-nav-view name="app-statistics"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Discover/API Tab -->
+  <ion-tab title="Discover" icon-off="ion-android-compass" icon-on="ion-android-compass" href="#/app/discover">
+    <ion-nav-view name="app-discover"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+
+
+  </ion-side-menu-content>
+  
+  
+  <ion-side-menu side="left">
+  
+    <ion-header-bar class="bar-myMenu">
+    </ion-header-bar>
+	
+    <ion-content class="custom">
+
+  
+
+		
+		<ion-list ng-repeat="data in profile" >
+		
+		<ion-item ng-show="data.img" class="item item-avatar" menu-close href="#/app/account">
+		
+          <img ng-src="{{data.img}}">
+	<h3 class="myHeading">{{data.Fname}}</h3>
+	  <h6 class="mySubHeading">ID Number: {{data.acc_id}}</h6>
+        </ion-item>
+		</ion-list>
+	
+	<div class="list">
+
+      <ion-list>
+        <ion-item menu-close href="#/app/comment" class="item item-icon-left"><i class="icon ion-star"></i>
+          Rate Us!
+        </ion-item>
+        <ion-item menu-close href="#/app/faq" class="item item-icon-left"><i class="icon ion-help-circled"></i>
+          FAQ
+        </ion-item>		
+        <ion-item menu-close href="#/app/about" class="item item-icon-left"><i class="icon ion-information-circled"></i>
+          About
+        </ion-item>		
+        <ion-item menu-close href="#/app/report" class="item item-icon-left"><i class="icon ion-information-circled"></i>
+          Report
+        </ion-item>			
+        <ion-item menu-close href="#/app/logout" class="item item-icon-left"><i class="icon ion-power"></i>
+          Logout
+        </ion-item>	
+      </ion-list>
+
+	   
+</div>
+
+    </ion-content>
+  </ion-side-menu> 
+</ion-side-menus>

@@ -1,0 +1,36 @@
+<ion-view view-title="">
+  <ion-content class="pageView">
+        <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+	 <div class="text-center">
+      <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+    </div>
+	
+	<div ng-show="!loading">
+	
+	<div class="padding">
+	<h4 class="dark"> News</h4>
+			<h6 class="mySubHeading">Fetched from www.cnn.com</h6>
+	</div>
+
+
+
+		<div class="list card" ng-repeat="items in myJsonData">
+		<div class="item item-body">
+         <div class="item item-thumbnail-left" href="{{items.url}}">
+		<img ng-src="{{items.urlToImage}}">
+				<h2 class="dark">{{items.title}}</h2>
+		</div>
+
+		<h4 class="dark">{{items.description}} </h4>
+		<hr class="myHR">
+				<h4 class="dark">{{items.publishedAt}} BY {{items.author}}<br></h4>
+					<a href="{{items.url}}"><h5 class="dark"> Read more {{items.url}}</h5></a>
+
+
+  </div>
+
+</div>
+
+</div>
+  </ion-content>
+</ion-view>

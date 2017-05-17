@@ -1,0 +1,68 @@
+
+<ion-view view-title="">
+  <ion-content class="pageView" ng-controller="HistoryCtrl">
+      <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+	 <div class="text-center">
+      <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+    </div>
+	
+	<div ng-show="!loading">
+
+
+	
+	
+<div class="pageViewInside">
+
+  <li class="item item-toggle">
+  <h2 class="">Activate Device</h2>
+     <label class="toggle toggle-balanced">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+      <div class="item item-icon-left" ng-repeat="x in profile">
+
+    <i class="icon ion-android-notifications">
+	</i>
+      <h3 class="myHeading">Client Name: {{x.Fname}}</h3>
+	</div>
+	    <h3>Historical Activities</h3>
+	    <ion-list>
+      <ion-item class="item-icon-right item-avatar item-default" ui-sref="edit({id: item.incident_id})"  ng-repeat="item in incidentInfo">
+
+  <h2 style="color:red;">{{item.alert}}</h2>
+        <p>
+          <b>{{item.description}}</b> {{item.incident_date}}<br>
+
+        </p>
+
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item class="text-center item-default" ng-if="incidentInfo && !incidentInfo.length"> No events found :( </ion-item>
+    </ion-list>
+	
+    <ion-infinite-scroll
+      ng-if="!incidentInfo"
+      on-infinite="loadNext()">
+    </ion-infinite-scroll>
+
+    <h5 class="mySubHeading">No more results.</h5>  <br>
+	
+
+  </div>
+
+</div>
+  </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <div class="button button-clear" ng-disabled="loading" ng-click="report()">
+        Report
+        <i class="icon ion-android-alert"></i>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

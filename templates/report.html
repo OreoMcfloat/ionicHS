@@ -1,0 +1,56 @@
+
+<ion-view view-title="">
+  <ion-content class="pageView" ng-controller="ReportCtrl">
+      <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+	 <div class="text-center">
+      <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+    </div>
+	
+	<div ng-show="!loading">
+	<div class="pageViewInside">
+
+	
+	<div class="item item-icon-left">
+
+		<i class="icon ion-android-notifications"></i>
+		<h3 class="myHeading">List of Reported Incidents</h3>
+		
+	</div>	
+		
+	<ion-list>
+    <ion-item class="item-icon-right item-avatar item-default"  ng-repeat="data in historyReport ">
+    
+
+	
+  <h2 style="color:green;">{{data.owner_name}}</h2>
+        <p>
+          <b>{{data.owner_address}}</b><br>
+		  		  <b>{{data.owner_contactnumber}}<br>
+		  		  <b>{{data.incident_date}}<br>
+
+        </p>
+
+      </ion-item>  
+    </ion-list>
+	
+
+    <h5 class="mySubHeading">No more results.</h5><br>
+	
+
+  </div>
+
+</div>
+
+
+  </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <div class="button button-clear" ng-disabled="loading" ng-click="report()">
+        Report
+        <i class="icon ion-android-alert"></i>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

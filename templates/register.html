@@ -1,0 +1,41 @@
+<ion-view view-title="">
+  <ion-content class="loginView" ng-controller="register">
+  
+  <br><br><br><br>
+<div style="text-align:center; "><img src="img/mobileLogo.png" ></div>
+
+<form class="list" ng-submit="loginform()">
+
+	<p style="text-align:center;padding-bottom: 10px;">{{error}}</p>
+	
+	 <div class="list list-inset">
+ 
+                <label class="item item-input">
+					<input type="text" ng-model="fullname" placeholder="Enter your full name" required>	
+				</label>
+                <label class="item item-input">
+					<input type="text" ng-model="username" placeholder="Enter username" required>
+                </label>
+			    <label class="item item-input">
+					<input type="password" ng-model="password" placeholder="Enter password" required>
+                </label>
+				<label class="item item-input">
+					<input type="text" ng-model="address" placeholder="Enter address" required>
+                </label>				
+				<label class="item item-input">
+					<input type="text" ng-model="contact" placeholder="Enter Contact Number" required>
+                </label>
+	
+</div>
+
+    <button type="submit" class="button button-dark button-block">
+  REGISTER
+</button>	
+
+<p style="text-align: center"> Already have an account? <a href="#/login">Sign in</a></p>
+</form>
+</div>
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,87 @@
+{  
+   "status":"ok",
+   "source":"bbc-news",
+   "sortBy":"top",
+   "articles":[  
+      {  
+         "author":"BBC News",
+         "title":"Brexit sovereignty plan set out in Great Repeal Bill",
+         "description":"Measures to end the supremacy of EU law come after the government formally triggered Brexit.",
+         "url":"http://www.bbc.co.uk/news/uk-politics-39439554",
+         "urlToImage":"http://ichef-1.bbci.co.uk/news/1024/cpsprodpb/E982/production/_95387795_ae6e86b7-4dca-47d0-b860-d4a8aaa49a1e.jpg",
+         "publishedAt":"2017-03-30T07:27:43Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Missing helicopter: Police launch Snowdonia ground search",
+         "description":"Five people are still missing after a helicopter vanished off the radar while over north Wales.",
+         "url":"http://www.bbc.co.uk/news/uk-wales-39440755",
+         "urlToImage":"http://ichef-1.bbci.co.uk/news/1024/cpsprodpb/176F0/production/_93348959_de27.jpg",
+         "publishedAt":"2017-03-30T09:14:35Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Insurer Lloyd's of London confirms new Brussels subsidiary",
+         "description":"The 329-year-old insurance market says it has chosen Brussels for its new EU subsidiary.",
+         "url":"http://www.bbc.co.uk/news/business-39441035",
+         "urlToImage":"http://ichef-1.bbci.co.uk/news/1024/cpsprodpb/79D4/production/_95388113_gettyimages-658342924.jpg",
+         "publishedAt":"2017-03-30T07:16:12Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Oscars will still use accountant firm PwC despite envelopegate blunder",
+         "description":"The firm that handles balloting is being retained, but its staff will be banned from using mobiles.",
+         "url":"http://www.bbc.co.uk/news/entertainment-arts-39441595",
+         "urlToImage":"http://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12BF4/production/_95388767_cullinan1_getty.jpg",
+         "publishedAt":"2017-03-30T08:00:22Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Lord Heseltine: Brexit Britain relinquishes power",
+         "description":"Tory peer and Remain campaigner Lord Heseltine says Britain has no leverage for Brexit negotiations.",
+         "url":"http://www.bbc.co.uk/news/uk-39439993",
+         "urlToImage":"http://ichef.bbci.co.uk/news/1024/cpsprodpb/1A0C/production/_95386660_p04yggp3.jpg",
+         "publishedAt":"2017-03-29T12:30:15Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Syria: Living with war",
+         "description":"BBC special coverage of a day in Syria where war may be simmering but is far from over.",
+         "url":"http://www.bbc.co.uk/news/live/world-middle-east-39432753",
+         "urlToImage":"http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+         "publishedAt":"2017-03-29T12:43:49Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Trump travel ban: Hawaii judge places indefinite hold",
+         "description":"The ruling means the president cannot enforce the ban while it is contested in court.",
+         "url":"http://www.bbc.co.uk/news/world-us-canada-39439595",
+         "urlToImage":"http://ichef.bbci.co.uk/news/1024/cpsprodpb/A90E/production/_95387234_87ac7bf9-48f7-4f50-a183-96a418ed3302.jpg",
+         "publishedAt":"2017-03-30T04:14:46Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Glastonbury reveals 88 more acts, including Katy Perry and Stormzy",
+         "description":"Ed Sheeran and Radiohead will be joined by Stormzy, Royal Blood and Katy Perry, amongst others.",
+         "url":"http://www.bbc.co.uk/news/entertainment-arts-39435586",
+         "urlToImage":"http://ichef.bbci.co.uk/news/1024/cpsprodpb/715A/production/_95381092_mediaitem95381091.jpg",
+         "publishedAt":"2017-03-30T06:59:53Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"Cut sugar in cakes, chocolate by 20%, industry told",
+         "description":"The guidelines for everyday foods are aimed at helping to reduce childhood obesity.",
+         "url":"http://www.bbc.co.uk/news/health-39433143",
+         "urlToImage":"http://ichef-1.bbci.co.uk/news/1024/cpsprodpb/FE40/production/_95388056_mediaitem95388055.jpg",
+         "publishedAt":"2017-03-30T01:33:50Z"
+      },
+      {  
+         "author":"BBC News",
+         "title":"SpaceX set to launch 'used rocket'",
+         "description":"California's SpaceX company expects to make a piece of history later when it re-flies a Falcon rocket.",
+         "url":"http://www.bbc.co.uk/news/science-environment-39437407",
+         "urlToImage":"http://ichef.bbci.co.uk/news/1024/cpsprodpb/1926/production/_95383460_landing.jpg",
+         "publishedAt":"2017-03-30T01:50:37Z"
+      }
+   ]
+}

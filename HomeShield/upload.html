@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<title>HS</title>
+	</head>
+	
+	<body>
+		<input type="file" id="hsfile" >
+		<input type="button" id="hsfilebutton" value="Start" >
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		
+		<script >
+			(function(){
+				var input;		  //anong file ang gagamitin
+				var lastModified; //anong date nagmodified yung file
+				//alert("yehey");
+				document.getElementById('hsfilebutton').onclick = function(){
+					startWatching();
+				};
+				
+				function startWatching(){ //part na aalamin kung may nagbago sa file
+					var file;
+					
+					if(typeof window.FileReader !== 'function'){
+						display("The File API is not supported by browser");
+						return;
+					}
+					
+					input = document.getElementById('hsfile');
+					
+					if(!input){
+						display("Couldn't find the file");
+					}
+					else if(!input.files){
+						display("File property not supported");
+					}
+					else if(!input.files[0]){
+						display("Please Select a File");
+					}
+					else{
+						file = input.files[0];
+						lastModified = file.size;
+						display(lastModified);
+						display("Change the file");
+						setInterval(tick, 1000); //(function, millisec)
+					}
+					
+				}
+				
+				function tick(){
+					var file = input.files && input.files[0];
+					
+					if ( file.size != lastModified){
+						lastModified = file.size;
+						display("File changed: "+ file.name);
+						$.ajax({
+							type: "GET", //url:pull.php
+							url: file.name, //dataType: 'JSON'
+							dataType: "text", //type: 'GET'
+							success: function(m){
+								console.log(m);
+								processData(m);
+								//$.getJSON("link here, function(data){console.log(data)})
+							}
+						});
+					}
+				}
+				
+				function display(msg){
+					var p = document.createElement('p');
+					p.innerHTML = msg;
+					document.body.appendChild(p);
+				}
+				
+				function processData(allText){
+					var allTextLines = allText.split(/\r\n|\n/);
+					var headers = allTextLines[0].split(',');
+					var lines = [];
+					
+					for (var i=1; i<allTextLines.length; i++){
+						var data = allTextLines[i].split(',');
+						if(data.length == headers.length){
+							var tarr = [];
+							
+							for(var j =0;j<headers.length;j++){
+								tarr.push(data[j]);
+							}
+							lines.push(tarr);
+						}
+					}
+					console.log(lines[lines.length-1]);
+					var devstat = lines[lines.length-1][0]; //makuha yung gstong array lang
+					var alertstat = lines[lines.length-1][1]; //makuha yung gstong array lang
+					
+					
+					
+						$.ajax({
+							url: (alertstat == "1")? 'http://localhost/HomeShield/php/addAlertIncident.php' :'http://localhost/HomeShield/php/addAllDeviceData.php?devstat="'+devstat+'"&alertstat="'+alertstat+'"',
+							type: 'POST',
+							success: function(data){
+								console.log("updated");
+							}
+						});
+					}
+					
+				
+			})();
+		</script>
+	</body>
+</html>

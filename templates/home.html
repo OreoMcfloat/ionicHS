@@ -1,0 +1,65 @@
+
+<ion-view view-title="">
+  <ion-content class="pageView" ng-controller="HistoryCtrl">
+      <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+	 <div class="text-center">
+      <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+    </div>
+	
+	<div ng-show="!loading">
+	<ion-toggle ng-model="a.airplaneMode" ng-checked="a.airplaneMode" ng-change="change()" toggle-class="toggle-calm"><h2 class="">Activate Device </h2></ion-toggle>
+
+	<div class="pageViewInside">
+
+
+		
+      <div class="item item-icon-left" ng-repeat="x in profile">
+
+		<i class="icon ion-android-notifications"></i>
+		<h3 class="myHeading">Latest Alarm Notification</h3>
+		
+	</div>
+	
+		
+		
+	<ion-list>
+    <ion-item class="item-icon-right item-avatar item-default"  ng-repeat="data in reportIncident ">
+    
+
+	
+  <h2 style="color:red;">{{data.alert}}</h2>
+        <p>
+          <b>{{data.description}}</b><br>
+		  <b>Date of Incident:<b>  {{data.incident_date}}
+        </p>
+
+      </ion-item>
+	  
+      <ion-item class="text-center item-default" ng-if="reportIncident && !reportIncident.length"> No events found :( </ion-item>
+    </ion-list>
+	
+    <ion-infinite-scroll
+      ng-if="!incidentInfo"
+      on-infinite="loadNext()">
+    </ion-infinite-scroll>
+
+    <h5 class="mySubHeading">No more results.</h5><br>
+	
+
+  </div>
+
+</div>
+
+
+  </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <div class="button button-clear" ng-disabled="loading" ng-click="report()">
+        Report
+        <i class="icon ion-android-alert"></i>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

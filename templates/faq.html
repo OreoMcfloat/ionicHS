@@ -1,0 +1,31 @@
+<ion-view view-title="">
+
+  <ion-content class="pageView" ng-controller="FaqCtrl">
+  
+        <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+	 <div class="text-center">
+      <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+    </div>
+	
+	<div ng-show="!loading">
+	<div class="padding" style="text-align:center;" img-src=>
+		<br><br>
+	<div style="text-align:center; "><img src="img/warning.png" >
+	<h3 class="">Your safety is compromised!</h3>
+	</div>
+
+
+	</div>
+
+    <a href="#/app/report" class="button button-assertive button-block">
+		Report Incident 
+	</button>	
+<a href="#/app/statistics" class="button button-stable button-block" >Dismiss</a>
+
+
+</div>
+
+
+  </ion-content>
+  
+</ion-view>
